@@ -12,9 +12,7 @@ import { ConfigModule } from '@nestjs/config';
 //   MongooseModule.forRoot('process.env.DB_URI'),
 //   CustomersModule,
 // ],
-  imports: [MongooseModule.forRoot('mongodb://localhost/27017')],
-  controllers: [CustomersController],
-  providers: [CustomersService],
+  imports: [MongooseModule.forRoot('mongodb://127.0.0.1:27017/mobius'), CustomersModule],
   
 })
 export class AppModule {}

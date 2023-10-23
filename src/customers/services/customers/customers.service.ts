@@ -16,9 +16,6 @@ export class CustomersService {
       const createCustomer = new this.customerModel(CreateCustomerDto);
       return createCustomer.save();
     }
-  
-
-    
 
     async findOne(id: string): Promise<Customer> {
         return this.customerModel.findOne({ _id: id }).exec();

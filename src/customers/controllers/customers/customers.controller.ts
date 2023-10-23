@@ -7,17 +7,11 @@ import { CreateCustomerDto } from '../../dto/create-customer.dto';
 export class CustomersController {
  constructor(private customersService: CustomersService) {}
 
- @Get()
- async getAllCustomer(): Promise<Customer[]>{
-    return this.customersService.findAll();
- }
+  @Get() async getAllCustomer(): Promise<Customer[]> {
+      return this.customersService.findAll();
+  }
   
-  @Post()
-  async createCustomer(
-    @Body() 
-    customer: CreateCustomerDto,
-
-  ): Promise<Customer> {
+  @Post() async createCustomer(@Body() customer: CreateCustomerDto): Promise<Customer> {
     return this.customersService.create(customer);
-}
+  }
 }

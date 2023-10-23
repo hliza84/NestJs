@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory, raw } from '@nestjs/mongoose';
-import { AnyExpression, Date, HydratedDocument } from 'mongoose';
+import { HydratedDocument } from 'mongoose';
 
 export type CustomerDocument = HydratedDocument<Customer>;
 
@@ -16,11 +16,6 @@ export class Customer {
 
   @Prop()
   age: number;
-
-
-
-
-
 }
 
 export const CustomerSchema = SchemaFactory.createForClass(Customer);
